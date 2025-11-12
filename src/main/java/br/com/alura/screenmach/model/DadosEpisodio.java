@@ -5,7 +5,8 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 // Propriedade necessária para que o jakson ignore os dados que não foram descritas aqui
 @JsonIgnoreProperties(ignoreUnknown = true)
-public record DadosSerie(   @JsonAlias("Title") String titulo,
-                            @JsonAlias("totalSeasons") Integer totalTemporadas,
-                            @JsonAlias("imdbRating")String avaliacoes) {
+public record DadosEpisodio(@JsonAlias("Title") String titulo,
+                            @JsonAlias("Episode") Integer numero,
+                            @JsonAlias("imdbRating") String avaliacao,
+                            @JsonAlias("Released") String dataLancamento) {
 }

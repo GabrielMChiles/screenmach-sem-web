@@ -7,7 +7,6 @@ public class ConverteDados implements IConverteDados{
 
     private ObjectMapper mapper = new ObjectMapper();
 
-
     // Metodo implementado da interface "IConverteDados". O mapeador lê o json e o retorna na classe.
     @Override
     public <T> T obterDados(String json, Class<T> classe) {
